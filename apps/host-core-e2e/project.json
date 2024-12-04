@@ -1,9 +1,0 @@
-{
-  "name": "host-core-e2e",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/host-core-e2e/src",
-  "tags": [],
-  "implicitDependencies": ["host-core"],
-  "// targets": "to see all targets run: nx show project host-core-e2e --web",
-  "targets": {}
-}
