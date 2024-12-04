@@ -36,7 +36,7 @@ const credentialsProvider = CredentialsProvider({
 
 export const authOptions: NextAuthConfig = {
   providers: [credentialsProvider],
-
+  trustHost: true,
   pages: {
     signIn: '/',
     signOut: '/',

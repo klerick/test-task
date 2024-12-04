@@ -1,8 +1,8 @@
 import { findNearestStation } from '../server-action/find-nearest-station';
 import {
-  getMlyClimateDataForStation,
+  getClimateDataForStation,
   Info,
-} from '../server-action/get-mly-climate-data-for-station';
+} from '../server-action/get-climate-data-for-station';
 import { StationInfo } from '../components/station-info';
 import { Chart } from '../components/chart';
 import { Card } from '@tremor/react';
@@ -18,7 +18,7 @@ export default async function Weather({
   );
   let data: Info[] = [];
   if (station) {
-    data = await getMlyClimateDataForStation(station.id);
+    data = await getClimateDataForStation(station.id);
   }
 
   return (

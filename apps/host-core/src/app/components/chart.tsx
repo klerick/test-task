@@ -1,6 +1,6 @@
 'use client';
 
-import { type Info } from '../server-action/get-mly-climate-data-for-station';
+import { type Info } from '../server-action/get-climate-data-for-station';
 import { AreaChart } from '@tremor/react';
 
 const format = (number: number): any => (isNaN(number) ? '-' : number);

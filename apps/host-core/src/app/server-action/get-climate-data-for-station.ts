@@ -28,13 +28,14 @@ export type Info = {
   max: number;
 };
 
-export async function getMlyClimateDataForStation(stationId: string) {
+export async function getClimateDataForStation(stationId: string) {
   apiUrl.searchParams.set('stations', stationId);
   const response = await fetch(apiUrl.toString(), {
     headers: {
       'Content-Type': 'application/json',
       token: NCEI_NOAA_TOKEN,
     },
+    signal: AbortSignal.timeout(3000),
   });
   const data = (await response.json()) as ResultType[];
 

@@ -17,5 +17,7 @@ export async function GET(request: Request) {
     endForFetch = parseInt(end);
   }
 
-  return fetchCityData(startForFetch, endForFetch);
+  const data = await fetchCityData(startForFetch, endForFetch);
+
+  return Response.json({ data });
 }
